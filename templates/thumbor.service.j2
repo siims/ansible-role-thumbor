@@ -1,0 +1,13 @@
+# File: /lib/systemd/system/thumbor.service
+
+[Unit]
+Description=Photo thumbnail service
+
+[Service]
+Type=simple
+User=root
+ExecStart=/usr/bin/python {{ thumbor_install_path }} -c {{ thumbor_config_file }} -l {{ logging_level }}
+Restart=on-abort
+
+[Install]
+WantedBy=default.target
