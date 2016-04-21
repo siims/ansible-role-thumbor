@@ -8,10 +8,4 @@ thumbor_log_file: /var/log/thumbor
 thumbor_working_directory: /var/lib/thumbor
 thumbor_default: /etc/default/thumbor
 thumbor_install_path: /usr/local/bin/thumbor
-thumbor_server_name: localhost
-thumbor_bind_address: 127.0.0.1
-thumbor_loader: thumbor.loaders.http_loader
-thumbor_storage: thumbor.storages.no_storage
-thumbor_result_storage: thumbor.storages.no_storage
-thumbor_max_age: 31536000
 logging_level: INFO
