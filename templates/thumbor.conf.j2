@@ -42,7 +42,7 @@ QUALITY = {{ quality | default(80) }}
 ## Quality index used for generated WebP images. If not set (None) the same level
 ## of JPEG quality will be used.
 ## Defaults to: None
-WEBP_QUALITY = {{ webp_quality | default(None) }}
+WEBP_QUALITY = {{ webp_quality | default('None') }}
 
 ## Specifies whether WebP format should be used automatically if the request
 ## accepts it (via Accept header)
@@ -108,7 +108,7 @@ STORAGE = '{{ thumbor_storage | default('thumbor.storages.file_storage') }}'
 ## the full name of a python module (python must be able to import it)
 ## Defaults to: None
 
-RESULT_STORAGE = '{{ thumbor_result_storage | default('thumbor.result_storages.file_storage') }}'
+RESULT_STORAGE = '{{ thumbor_result_storage | default('None') }}'
 
 ## The imaging engine thumbor should use to perform image operations. This must
 ## be the full name of a python module (python must be able to import it)
@@ -140,7 +140,7 @@ ALLOW_OLD_URLS = {{ allow_old_urls | default(True) }}
 
 ## The root path where the File Loader will try to find images
 ## Defaults to: /tmp
-FILE_LOADER_ROOT_PATH = '{{ file_loader_root_path | default('/data/loader') }}'
+FILE_LOADER_ROOT_PATH = '{{ file_loader_root_path | default('/tmp') }}'
 
 ################################################################################
 
@@ -175,19 +175,19 @@ HTTP_LOADER_DEFAULT_USER_AGENT = '{{ http_loader_default_user_agent | default('T
 
 ## The proxy host needed to load images through
 ## Defaults to: None
-HTTP_LOADER_PROXY_HOST = {{ http_loader_proxy_host | default(None) }}
+HTTP_LOADER_PROXY_HOST = {{ http_loader_proxy_host | default('None') }}
 
 ## The proxy port for the proxy host
 ## Defaults to: None
-HTTP_LOADER_PROXY_PORT = {{ http_loader_proxy_port | default(None) }}
+HTTP_LOADER_PROXY_PORT = {{ http_loader_proxy_port | default('None') }}
 
 ## The proxy username for the proxy host
 ## Defaults to: None
-HTTP_LOADER_PROXY_USERNAME = {{ http_loader_proxy_username | default(None) }}
+HTTP_LOADER_PROXY_USERNAME = {{ http_loader_proxy_username | default('None') }}
 
 ## The proxy password for the proxy host
 ## Defaults to: None
-HTTP_LOADER_PROXY_PASSWORD = {{ http_loader_proxy_password | default(None) }}
+HTTP_LOADER_PROXY_PASSWORD = {{ http_loader_proxy_password | default('None') }}
 
 ################################################################################
 
@@ -283,7 +283,7 @@ REDIS_STORAGE_SERVER_DB = {{ redis_storage_server_db | default(0) }}
 
 ## Redis storage server password
 ## Defaults to: None
-REDIS_STORAGE_SERVER_PASSWORD = {{ redis_storage_server_password | default(None) }}
+REDIS_STORAGE_SERVER_PASSWORD = {{ redis_storage_server_password | default('None') }}
 
 ################################################################################
 
@@ -323,7 +323,7 @@ MIXED_STORAGE_DETECTOR_STORAGE = '{{ mixed_storage_detector_storage | default('t
 ## The callback function name that should be used by the META route for JSONP
 ## access
 ## Defaults to: None
-META_CALLBACK_NAME = {{ meta_callback_name | default(None) }}
+META_CALLBACK_NAME = {{ meta_callback_name | default('None') }}
 
 ################################################################################
 
@@ -431,7 +431,7 @@ REDIS_QUEUE_SERVER_DB = {{ redis_queue_server_db | default(0) }}
 
 ## Server password for the queued redis detector
 ## Defaults to: None
-REDIS_QUEUE_SERVER_PASSWORD = {{ redis_queue_server_password | default(None) }}
+REDIS_QUEUE_SERVER_PASSWORD = {{ redis_queue_server_password | default('None') }}
 
 ################################################################################
 
@@ -440,11 +440,11 @@ REDIS_QUEUE_SERVER_PASSWORD = {{ redis_queue_server_password | default(None) }}
 
 ## AWS key id
 ## Defaults to: None
-SQS_QUEUE_KEY_ID = {{ sqs_queue_key_id | default(None) }}
+SQS_QUEUE_KEY_ID = {{ sqs_queue_key_id | default('None') }}
 
 ## AWS key secret
 ## Defaults to: None
-SQS_QUEUE_KEY_SECRET = {{ sqs_queue_key_secret | default(None) }}
+SQS_QUEUE_KEY_SECRET = {{ sqs_queue_key_secret | default('None') }}
 
 ## AWS SQS region
 ## Defaults to: us-east-1
@@ -467,7 +467,7 @@ ERROR_HANDLER_MODULE = '{{ error_handler_module | default('thumbor.error_handler
 
 ## File of error log as json
 ## Defaults to: None
-ERROR_FILE_LOGGER = {{ error_file_logger | default(None) }}
+ERROR_FILE_LOGGER = {{ error_file_logger | default('None') }}
 
 ## File of error log name is parametrized with context attribute
 ## Defaults to: False
