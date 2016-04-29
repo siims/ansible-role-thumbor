@@ -22,13 +22,14 @@
   - libssl-dev
   - python-dev
 
-- name: install pgmagick
-  pip: >
-    name={{item}}
+# NB! newest thumbor has breaking chenges!
+# TODO: upgrade to newest thumbor
+- name: install thumbor
+  pip: name={{item.pkg}} version={{item.version}}
   with_items:
-    - pycurl
-    - numpy
-    - thumbor
+    - { pkg: thumbor, version: 5.2.1 }
+    - { pkg: remotecv, version: 1.0.3 }
+    - { pkg: redis, version: 2.4.12 }
 
 - name: copy thumbor conf default
   template: >

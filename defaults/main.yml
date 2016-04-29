@@ -1,4 +1,5 @@
 ---
+thumbor_version: 5.2.1
 thumbor_user: thumbor
 thumbor_group: thumbor
 thumbor_home: /home/thumbor
