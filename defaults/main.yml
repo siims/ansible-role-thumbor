@@ -9,4 +9,6 @@ thumbor_log_file: /var/log/thumbor
 thumbor_working_directory: /var/lib/thumbor
 thumbor_default: /etc/default/thumbor
 thumbor_install_path: /usr/local/bin/thumbor
+# TODO: put thumbor to run in python virtualenv
+thumbor_virtualenv_path: /thumbor
 logging_level: INFO
