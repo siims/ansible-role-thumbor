@@ -1,5 +1,5 @@
 ---
-- hosts: thumborbasetest
+- hosts: localhost
   remote_user: root
   roles:
-    - ansible_thumbor_base
+    - ansible-role-thumbor
