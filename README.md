@@ -1,6 +1,8 @@
 ansible-role-thumbor
 =========
 
+[![Build Status](https://travis-ci.org/siims/ansible-role-thumbor.svg?branch=master)](https://travis-ci.org/siims/ansible-role-thumbor)
+
 Ansible script that installs Thumbor smart imaging service for linux (see: http://thumbor.readthedocs.io/en/latest/). Currently Thumbor version frozen to 5.2.1.
 
 Role Variables
