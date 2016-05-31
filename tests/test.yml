@@ -2,4 +2,4 @@
 - hosts: localhost
   remote_user: root
   roles:
-    - ansible-role-thumbor
+    - role: ansible-role-thumbor
