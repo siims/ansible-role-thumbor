@@ -7,7 +7,7 @@ env:
   - distribution: debian
     version: 8.4
     init: /usr/lib/systemd/systemd
-    SITE=test.yml
+    - SITE=test.yml
 
 # Install ansible
 addons:
