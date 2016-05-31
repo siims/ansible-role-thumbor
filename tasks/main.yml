@@ -55,7 +55,5 @@
     group=root
     mode=644
 
-- service: >
-    name=thumbor
-    state=started
-    enabled=yes
+- name: Ensure thumbor is started and enabled to start at boot.
+  service: name=thumbor state=started enabled=yes
